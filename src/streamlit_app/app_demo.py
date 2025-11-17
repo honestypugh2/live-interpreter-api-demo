@@ -2,11 +2,8 @@
 
 import streamlit as st
 import sys
-import os
 from pathlib import Path
 import time
-import queue
-import threading
 
 # Add project root to path for imports
 project_root = Path(__file__).resolve().parent.parent.parent
