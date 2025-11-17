@@ -1,0 +1,29 @@
+[project]
+name = "live-interpreter-api-demo"
+version = "0.1.0"
+description = "Azure Live Interpreter API demo with Streamlit and React interfaces for real-time speech translation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-cognitiveservices-speech>=1.47.0",
+    "azure-identity>=1.25.1",
+    "fastapi>=0.121.1",
+    "uvicorn[standard]>=0.27.0",
+    "websockets>=12.0",
+    "python-dotenv>=1.2.1",
+    "streamlit>=1.51.0",
+    "pydantic>=2.12.4",
+    "pydantic-settings>=2.1.0",
+    "numpy>=1.26.0",
+    "sounddevice>=0.4.6",
+    "soundfile>=0.12.1",
+    "pyaudio>=0.2.14",
+    "aiofiles>=23.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.407",
+    "pytest>=9.0.1",
+    "ruff>=0.14.4",
+]

@@ -1,0 +1,22 @@
+{
+  "name": "azure-live-interpreter-react-app",
+  "version": "1.0.0",
+  "description": "Quick start scripts for Azure Live Interpreter React App",
+  "scripts": {
+    "start": "bash start.sh",
+    "start:backend": "cd backend && python main.py",
+    "start:frontend": "cd frontend && npm run dev",
+    "install:all": "pip install -r ../../requirements.txt && cd frontend && npm install",
+    "build:frontend": "cd frontend && npm run build",
+    "test:backend": "curl http://localhost:8000/health"
+  },
+  "keywords": [
+    "azure",
+    "speech",
+    "translation",
+    "live-interpreter",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT"
+}
