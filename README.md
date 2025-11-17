@@ -520,6 +520,10 @@ live-interpreter-api-demo/
    cd live-interpreter-api-demo
    ```
 
+   ```bash
+   az login
+   ```
+
 2. **Set up Python environment**
    ```bash
    python -m venv venv
