@@ -2,6 +2,18 @@
 
 A comprehensive demonstration of Azure Speech Translation (Live Interpreter) API that captures audio from meetings, translates speech in real-time, and plays back translated audio with captions. This project provides two complete UI implementations: **Python Streamlit** and **React.js with TypeScript**.
 
+### Streamlit App
+<p align="center">
+  <img src="images/liveinterpreter_streamlit.png" alt="Streamlit Interface" width="45%" />
+  <img src="images/liveinterpreter_streamlit_en_es.png" alt="Streamlit Live Translations" width="45%" />
+</p>
+
+### React App
+<p align="center">
+  <img src="images/liveinterpreter_react.png" alt="React Interface" width="45%" />
+  <img src="images/liveinterpreter_react_en_es.png" alt="React Live Translations" width="45%" />
+</p>
+
 ## 🎯 Overview
 
 This demo showcases how to implement Azure's Live Interpreter API outside of Microsoft Teams for custom real-time speech translation scenarios. It demonstrates:
