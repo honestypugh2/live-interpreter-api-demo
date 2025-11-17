@@ -598,6 +598,14 @@ streamlit run app.py
 
 Open browser to `http://localhost:8501`
 
+**Demo Mode (Simulated Meeting - No Microphone Required)**:
+```bash
+cd src/streamlit_app
+streamlit run app_demo.py
+```
+
+The demo app showcases a simulated council meeting with pre-scripted English/Spanish dialogue, perfect for demonstrations, training, or testing the UI without Azure API costs.
+
 ### Running the React App
 
 **Option 1: Quick Start (Recommended)**
@@ -633,6 +641,20 @@ Open browser to `http://localhost:5173`
 
 > **Note**: On Windows, use `start.bat` instead of `start.sh`
 
+**Demo Mode (Simulated Meeting - No Backend Required)**:
+```bash
+cd src/react_app
+./start-demo.sh  # Windows: start-demo.bat
+```
+
+The React demo app runs entirely in the browser with simulated translations, requiring no Azure API or microphone. Perfect for:
+- Sales demonstrations at trade shows
+- Training sessions without live setup
+- UI/UX testing without Azure costs
+- Creating documentation and videos
+
+See [DEMO_README.md](src/react_app/DEMO_README.md) for full demo documentation.
+
 ## 🎛️ Features
 
 ### Streamlit App Features
@@ -643,11 +665,18 @@ Open browser to `http://localhost:5173`
 - ✅ Audio playback of translated speech
 - ✅ Translation history with export
 - ✅ Simple configuration interface
+- ✅ **Demo mode** with simulated council meeting
 
 ### React App Features
 - ✅ Modern responsive UI with Tailwind CSS
 - ✅ WebSocket-based real-time streaming
 - ✅ Dynamic audio recording controls
+- ✅ Live connection status indicator
+- ✅ Interactive language selection
+- ✅ Real-time caption streaming
+- ✅ Audio visualization
+- ✅ Mobile-responsive design
+- ✅ **Demo mode** with no backend required (browser-only)
 - ✅ Live connection status indicator
 - ✅ Interactive language selection
 - ✅ Real-time caption streaming

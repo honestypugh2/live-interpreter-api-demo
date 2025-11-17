@@ -1,15 +1,22 @@
-# Demo App - Simulated Council Meeting
+# Demo Apps - Simulated Council Meeting
 
 ## Overview
 
-`app_demo.py` is a demonstration version of the Azure Live Interpreter that simulates a bilingual council meeting without requiring live audio input. This is perfect for:
+This project includes **two demo versions** that simulate a bilingual council meeting without requiring live audio input:
 
-- **Demonstrations** to stakeholders
+1. **Streamlit Demo** (`app_demo.py`) - Python-based with real Azure TTS
+2. **React Demo** (`AppDemo.tsx`) - Browser-only, no backend required
+
+Both are perfect for:
+
+- **Demonstrations** to stakeholders and at trade shows
 - **Testing** translation and voice features
 - **Training** sessions for users
 - **Showcasing** capabilities without microphone setup
 
-## Features
+## Streamlit Demo App
+
+### Features
 
 ### 🎭 Simulated Meeting
 - Pre-scripted English/Spanish council meeting dialogue
@@ -33,7 +40,7 @@
 - Displays translations in target languages
 - Audio playback for both original and translated speech
 
-## Running the Demo
+## Running the Streamlit Demo
 
 ### Quick Start
 
@@ -189,6 +196,77 @@ The demo uses Azure Speech SDK for:
 - Reduce delay between lines
 - Disable audio playback for faster demo
 - Check internet connection speed
+
+## React Demo App
+
+### Features
+
+- **No Backend Required**: Runs entirely in the browser
+- **No Azure API Calls**: Pre-scripted translations for demos
+- **Instant Startup**: No Python or backend dependencies
+- **Modern UI**: Responsive React interface with Tailwind CSS
+- **Perfect for Trade Shows**: No internet or Azure credentials needed after initial load
+
+### Running the React Demo
+
+```bash
+cd src/react_app
+./start-demo.sh  # Windows: start-demo.bat
+```
+
+Or manually:
+```bash
+cd src/react_app/frontend
+npm run dev:demo
+```
+
+Open browser to `http://localhost:5173`
+
+### Demo Features
+
+1. **Simulated Council Meeting**
+   - Same 8-line English/Spanish dialogue as Streamlit demo
+   - Pre-defined translations display instantly
+
+2. **Demo Controls**
+   - Start/Pause/Resume/Stop buttons
+   - Progress bar showing current line
+   - Auto-advance with configurable delay (1-10 seconds)
+   - Manual step-through mode
+
+3. **Live Translation Display**
+   - Shows current speaker and language
+   - Displays original text
+   - Shows translations in real-time
+   - Simulated audio playback buttons
+
+4. **Meeting Transcript**
+   - Expandable history of all translations
+   - Collapsible entries for easy navigation
+   - Clear transcript button
+
+### Deployment
+
+Build for static hosting (GitHub Pages, Netlify, Vercel):
+
+```bash
+cd src/react_app/frontend
+npm run build:demo
+```
+
+Deploy the `dist/` folder to any static hosting service - no server needed!
+
+## Comparison
+
+| Feature | Streamlit Demo | React Demo |
+|---------|----------------|------------|
+| **Backend** | Required (Python) | Not required |
+| **Azure API** | Real calls | Simulated |
+| **Audio** | Real Azure TTS | Simulated |
+| **Internet** | Required | Optional (after load) |
+| **Startup Time** | ~5-10 seconds | Instant |
+| **Best For** | Testing real Azure | Trade shows, training |
+| **Deployment** | Server required | Static hosting |
 
 ## Next Steps
 

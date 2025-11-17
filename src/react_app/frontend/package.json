@@ -5,8 +5,11 @@
   "description": "React TypeScript frontend for Azure Live Interpreter",
   "scripts": {
     "dev": "vite",
+    "dev:demo": "vite --mode demo",
     "build": "tsc && vite build",
+    "build:demo": "vite build --mode demo",
     "preview": "vite preview",
+    "preview:demo": "vite preview --mode demo",
     "lint": "eslint . --ext ts,tsx"
   },
   "dependencies": {

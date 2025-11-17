@@ -9,6 +9,7 @@ export interface TranslationResult {
   timestamp: string;
   duration_ms: number;
   synthesized_audio?: Record<string, string>;  // Base64 encoded audio per language
+  speaker?: string;  // Optional speaker name for demo mode
 }
 
 export interface LanguageConfig {
