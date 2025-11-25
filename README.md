@@ -523,6 +523,7 @@ live-interpreter-api-demo/
 
 2. **System Requirements**
    - Python 3.12 or higher
+   - [uv](https://docs.astral.sh/uv/) package manager (recommended) or pip
    - Node.js 18+ (for React app)
    - Microphone access
    - Audio output device
@@ -535,15 +536,37 @@ live-interpreter-api-demo/
    cd live-interpreter-api-demo
    ```
 
+2. **Verify and install uv**
+   
+   Check if uv is installed:
    ```bash
-   az login
+   uv --version
+   ```
+   
+   If not installed, install uv:
+   
+   **Unix/macOS/Linux:**
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+   
+   **Windows:**
+   ```powershell
+   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+   ```
+   
+   **Alternative (using pip):**
+   ```bash
+   pip install uv
    ```
 
-2. **Set up Python environment**
+3. **Set up Python environment**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -e .
+   # Sync dependencies (creates .venv automatically)
+   uv sync
+   
+   # Activate virtual environment
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
 3. **Configure environment variables**

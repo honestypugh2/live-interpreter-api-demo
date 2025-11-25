@@ -179,13 +179,25 @@ Attendees use provided headphones at seats
    git clone https://github.com/honestypugh2/live-interpreter-api-demo.git
    cd live-interpreter-api-demo
    
-   # Set up Python environment (requires Python 3.12+)
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   # Verify uv is installed
+   uv --version
    
-   # Install Python dependencies
-   pip install -r requirements.txt
-   # OR: pip install -e .  # for development mode
+   # If uv is not installed, install it:
+   # Unix/macOS/Linux:
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   
+   # Windows:
+   # powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+   
+   # Or using pip:
+   # pip install uv
+   
+   # Set up Python environment (requires Python 3.12+)
+   # Sync dependencies (creates .venv automatically)
+   uv sync
+   
+   # Activate virtual environment
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    
    # Copy and configure .env file
    cp .env.example .env

@@ -146,7 +146,7 @@ EOF
 
 ```bash
 # Backend dependencies (from project root)
-pip install -r requirements.txt
+uv sync
 
 # Frontend dependencies
 cd src/react_app/frontend
@@ -175,6 +175,17 @@ Open your browser to: **http://localhost:5173**
 
 ## 📦 Prerequisites
 
+Before you begin, verify that **uv** is installed (modern Python package manager, 10-100x faster than pip):
+
+```bash
+uv --version
+```
+
+If not installed:
+- **Unix/macOS**: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- **Windows**: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
+- **Alternative (via pip)**: `pip install uv`
+
 ### Required Software
 
 | Software | Version | Purpose |
@@ -182,7 +193,7 @@ Open your browser to: **http://localhost:5173**
 | **Node.js** | 16.x or higher | JavaScript runtime for frontend |
 | **npm** | 8.x or higher | Package manager |
 | **Python** | 3.9 or higher | Backend runtime |
-| **pip** | Latest | Python package manager |
+| **uv** | Latest | Python package manager |
 
 ### Azure Services
 
@@ -205,10 +216,10 @@ Open your browser to: **http://localhost:5173**
 From the **project root**:
 
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
-**Key dependencies:**
+**Key dependencies:****
 - `azure-cognitiveservices-speech` - Azure Speech SDK
 - `fastapi` - Web framework
 - `uvicorn` - ASGI server
@@ -811,7 +822,7 @@ npm update
 **Backend errors:**
 ```bash
 # Reinstall dependencies
-pip install --upgrade -r requirements.txt
+uv sync --upgrade
 
 # Check Python version
 python --version  # Should be 3.9+
@@ -846,13 +857,18 @@ python main.py 2>&1 | tee app.log
 
 ```dockerfile
 # backend.Dockerfile
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
+
+# Copy dependency files
+COPY pyproject.toml uv.lock ./
+
 # Install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN uv sync --frozen --no-dev
 
 # Copy backend code
 COPY src/react_app/backend/ ./backend/
@@ -861,7 +877,7 @@ COPY .env .
 
 WORKDIR /app/backend
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
 #### Create Dockerfile for Frontend

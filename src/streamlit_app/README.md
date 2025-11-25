@@ -16,9 +16,28 @@ This directory contains the Streamlit-based user interface for the Azure Live In
 
 ### Prerequisites
 
-1. Install dependencies:
+1. Verify uv is installed:
    ```bash
-   pip install -e .
+   uv --version
+   ```
+   
+   If not installed:
+   ```bash
+   # Unix/macOS/Linux
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   
+   # Windows
+   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+   
+   # Or using pip
+   pip install uv
+   ```
+
+2. Install dependencies:
+   ```bash
+   # From project root
+   uv sync
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
 2. Configure environment variables in `.env`:

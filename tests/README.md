@@ -2,6 +2,33 @@
 
 This directory contains unit tests for the Live Interpreter API Demo project.
 
+## Prerequisites
+
+Before running tests, ensure you have:
+
+1. **uv package manager installed**:
+   ```bash
+   # Verify installation
+   uv --version
+   ```
+   
+   If not installed:
+   ```bash
+   # Unix/macOS/Linux
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   
+   # Windows
+   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+   
+   # Or using pip
+   pip install uv
+   ```
+
+2. Installed all project dependencies:
+   ```bash
+   uv sync --group dev
+   ```
+
 ## Test Structure
 
 The test suite is organized into the following files:
@@ -62,7 +89,7 @@ python -m pytest tests/test_audio_handler.py::TestAudioRecorder::test_start_reco
 
 ```bash
 # Install coverage if needed
-pip install pytest-cov
+uv pip install pytest-cov
 
 # Run with coverage report
 python -m pytest tests/ --cov=src --cov-report=html
@@ -114,7 +141,7 @@ The test suite requires the following packages (already in `pyproject.toml`):
 Install test dependencies:
 
 ```bash
-pip install -e ".[test]"
+uv sync --group dev
 ```
 
 ## Test Coverage

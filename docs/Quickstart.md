@@ -8,6 +8,7 @@ Get up and running with Azure Live Interpreter API demo in 5 minutes!
 - Node.js 18+ (for React app)
 - Azure subscription
 - Microphone
+- **uv package manager** (we'll verify/install in Step 2)
 
 ## Step 1: Azure Setup (2 minutes)
 
@@ -19,10 +20,32 @@ Get up and running with Azure Live Interpreter API demo in 5 minutes!
 
 ## Step 2: Project Setup (2 minutes)
 
-1. **Clone and install**:
+1. **Verify uv is installed**:
+   ```bash
+   uv --version
+   ```
+   
+   If not installed, install it now:
+   ```bash
+   # Unix/macOS/Linux
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   
+   # Windows
+   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+   
+   # Or using pip
+   pip install uv
+   ```
+
+2. **Clone and install dependencies**:
    ```bash
    cd live-interpreter-api-demo
-   pip install -e .
+   
+   # Sync dependencies (creates .venv automatically)
+   uv sync
+   
+   # Activate environment
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
 2. **Configure environment**:
