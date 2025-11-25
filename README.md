@@ -1,5 +1,8 @@
 # Azure Live Interpreter API Demo
 
+> **⚠️ IMPORTANT NOTICE**  
+> This code is intended for **development and learning purposes only**. It is **not designed for production use**. Not all necessary Azure AI services configurations and best practices are implemented in this demo. For production deployments, please refer to Azure's official documentation and implement appropriate security, scaling, monitoring, and error handling measures.
+
 A comprehensive demonstration of Azure Speech Translation (Live Interpreter) API that captures audio from meetings, translates speech in real-time, and plays back translated audio with captions. This project provides two complete UI implementations: **Python Streamlit** and **React.js with TypeScript**.
 
 ### Streamlit App
