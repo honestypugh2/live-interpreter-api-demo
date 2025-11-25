@@ -900,7 +900,7 @@ See [Azure Speech Translation Language Support](https://learn.microsoft.com/azur
 #### Software Stack
 - Windows 10/11 or Ubuntu 22.04 LTS
 - Python 3.12+ environment
-- Azure Speech Service subscription (~$1/hour translation)
+- Azure Speech Service subscription (~$2.50/hour translation, ~$5/meeting)
 - OBS Studio (optional, for recording/streaming)
 
 #### Network Setup
@@ -911,16 +911,38 @@ See [Azure Speech Translation Language Support](https://learn.microsoft.com/azur
 
 ## 💰 Cost Estimation
 
+> **Pricing as of November 2025** - Visit [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) for current rates
+
 ### Azure Speech Service Pricing
-- **Speech to Text**: $1.00/hour
+- **Speech to Text**: $1.00/hour (real-time)
 - **Speech Translation**: $2.50/hour (up to 2 target languages)
-- **Additional Languages**: +$0.50/language/hour
-- **Text to Speech**: $16.00/1M characters (Neural voices)
+- **Additional Languages**: +$0.50/language/hour (3+ languages)
+- **Text to Speech**: $15.00/1M characters (Neural voices)
+- **Free Tier**: 5 audio hours/month + 0.5M characters/month
+
+### Live Interpreter Pricing (Alternative)
+If using Live Interpreter feature specifically:
+- **Input Audio**: $1.00/hour
+- **Output Text**: $10.00/1M characters
+- **Output Audio (Standard voice)**: $1.50/hour
+- **Output Audio (Custom voice)**: $2.00/hour
 
 ### Example: 2-hour Council Meeting (EN ↔ ES)
-- Translation: $5.00
-- Synthesis: ~$0.50
-- **Total**: ~$5.50 per meeting
+**Using Standard Speech Translation:**
+- Translation: $5.00 (2 hours × $2.50/hour)
+- Synthesis: ~$0.45 (30,000 chars × $15/1M chars)
+- **Total**: ~$5.45 per meeting
+
+**Using Live Interpreter:**
+- Input: $2.00 (2 hours × $1.00/hour)
+- Output Audio: $3.00 (2 hours × $1.50/hour)
+- **Total**: ~$5.00 per meeting
+
+### Cost Optimization Tips
+- ✅ Use demo mode for training (no Azure costs)
+- ✅ Leverage free tier for development (5 hours/month)
+- ✅ Disable TTS if only captions needed
+- ✅ Stop recognition between agenda items
 
 [Azure Speech Pricing Details](https://azure.microsoft.com/pricing/details/cognitive-services/speech-services/)
 
