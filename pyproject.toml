@@ -20,6 +20,7 @@ dependencies = [
     "pyaudio>=0.2.14",
     "aiofiles>=23.2.1",
     "pytest-mock>=3.15.1",
+    "diagrams>=0.25.1",
 ]
 
 [dependency-groups]
