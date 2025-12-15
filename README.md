@@ -30,7 +30,7 @@ This demo showcases how to implement Azure's Live Interpreter API outside of Mic
 
 ### Streamlit App Architecture (Monolithic)
 
-![Streamlit Architecture](docs/streamlit_monolithic_architecture.png)
+![Streamlit Architecture](images/streamlit_monolithic_architecture.png)
 
 **Key Characteristics:**
 - Monolithic architecture: All components run in single Python process
@@ -49,7 +49,7 @@ For detailed architecture diagrams, see [StreamlitArchitectureDiagrams.md](docs/
 
 ### React App Architecture (Client-Server)
 
-![React Architecture](docs/react_client_server_architecture.png)
+![React Architecture](images/react_client_server_architecture.png)
 
 **Key Characteristics:**
 - Client-Server architecture: Separate frontend and backend processes
@@ -67,7 +67,7 @@ For detailed architecture diagrams, see [ReactArchitectureDiagrams.md](docs/Reac
 
 ### Data Flow: Translation Workflow
 
-![Streamlit Data Flow](docs/streamlit_continuous_flow.png)
+![Streamlit Data Flow](images/streamlit_continuous_flow.png)
 
 #### Continuous Mode (Real-time Translation)
 1. **User Action**: Click "Start Recording"
@@ -93,7 +93,7 @@ For detailed architecture diagrams, see [ReactArchitectureDiagrams.md](docs/Reac
 
 ### Message Flow: React WebSocket Communication
 
-![React WebSocket Flow](docs/react_websocket_flow.png)
+![React WebSocket Flow](images/react_websocket_flow.png)
 
 **Key Message Types:**
 
@@ -245,9 +245,6 @@ live-interpreter-api-demo/
 │       └── README.md                 # React app documentation
 │
 ├── docs/                             # Additional documentation
-│   ├── ARCHITECTURE.md               # System architecture details
-│   ├── DEPLOYMENT.md                 # Deployment guide
-│   └── API_REFERENCE.md              # API documentation
 │
 └── examples/                         # Example configurations
     ├── council_meeting_setup.md      # Council meeting specific setup

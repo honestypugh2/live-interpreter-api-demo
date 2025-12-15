@@ -6,9 +6,9 @@ Visual architecture diagrams for the Streamlit-based Azure Live Interpreter appl
 
 ### 1. Monolithic Architecture Diagram
 
-![Streamlit Monolithic Architecture](streamlit_monolithic_architecture.png)
+![Streamlit Monolithic Architecture](../images/streamlit_monolithic_architecture.png)
 
-**File**: `streamlit_monolithic_architecture.png`
+**File**: `../images/streamlit_monolithic_architecture.png`
 
 This diagram illustrates the complete monolithic architecture of the Streamlit application, showing:
 
@@ -63,9 +63,9 @@ This diagram illustrates the complete monolithic architecture of the Streamlit a
 
 ### 2. Continuous Translation Flow Diagram
 
-![Streamlit Continuous Translation Flow](streamlit_continuous_flow.png)
+![Streamlit Continuous Translation Flow](../images/streamlit_continuous_flow.png)
 
-**File**: `streamlit_continuous_flow.png`
+**File**: `../images/streamlit_continuous_flow.png`
 
 This diagram shows the step-by-step data flow for **continuous real-time translation mode**:
 
@@ -209,12 +209,12 @@ pip install diagrams
 
 ```bash
 # Generate architecture diagram
-python generate_streamlit_architecture.py
+python scripts/generate_streamlit_architecture.py
 
 # Generate data flow diagram
-python generate_dataflow.py
+python scripts/generate_dataflow.py
 
-# Both diagrams will be saved to docs/ directory
+# Diagrams will be saved to images/ directory
 ```
 
 ### Customize Diagrams
@@ -332,5 +332,5 @@ These diagrams are part of the Live Interpreter API Demo project. See [LICENSE](
 **Generated**: December 12, 2025  
 **Tool**: Python diagrams library with Azure icons  
 **Files**: 
-- `streamlit_monolithic_architecture.png` (Architecture Overview)
-- `streamlit_continuous_flow.png` (Data Flow Workflow)
+- `../images/streamlit_monolithic_architecture.png` (Architecture Overview)
+- `../images/streamlit_continuous_flow.png` (Data Flow Workflow)

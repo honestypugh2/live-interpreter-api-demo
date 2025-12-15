@@ -6,9 +6,9 @@ Visual architecture diagrams for the React-based Azure Live Interpreter applicat
 
 ### 1. Client-Server Architecture Diagram
 
-![React Client-Server Architecture](react_client_server_architecture.png)
+![React Client-Server Architecture](../images/react_client_server_architecture.png)
 
-**File**: `react_client_server_architecture.png`
+**File**: `../images/react_client_server_architecture.png`
 
 This diagram illustrates the complete client-server architecture with clear separation between frontend and backend:
 
@@ -90,9 +90,9 @@ This diagram illustrates the complete client-server architecture with clear sepa
 
 ### 2. WebSocket Message Flow Diagram
 
-![React WebSocket Message Flow](react_websocket_flow.png)
+![React WebSocket Message Flow](../images/react_websocket_flow.png)
 
-**File**: `react_websocket_flow.png`
+**File**: `../images/react_websocket_flow.png`
 
 This diagram shows the complete WebSocket message exchange sequence for a continuous translation session:
 
@@ -347,15 +347,15 @@ pip install diagrams
 
 ```bash
 # Generate client-server architecture diagram
-python generate_react_architecture.py
+python scripts/generate_react_architecture.py
 
 # Generate WebSocket message flow diagram
-python generate_react_websocket_flow.py
+python scripts/generate_react_websocket_flow.py
 
 # Generate all diagrams at once
-python generate_all_diagrams.py
+python scripts/generate_all_diagrams.py
 
-# Diagrams will be saved to docs/ directory
+# Diagrams will be saved to images/ directory
 ```
 
 ### Customize Diagrams
@@ -507,5 +507,5 @@ These diagrams are part of the Live Interpreter API Demo project. See [LICENSE](
 **Generated**: December 12, 2025  
 **Tool**: Python diagrams library with Azure icons  
 **Files**: 
-- `react_client_server_architecture.png` (Client-Server Architecture)
-- `react_websocket_flow.png` (WebSocket Message Flow)
+- `../images/react_client_server_architecture.png` (Client-Server Architecture)
+- `../images/react_websocket_flow.png` (WebSocket Message Flow)
