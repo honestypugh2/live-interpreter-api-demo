@@ -1,6 +1,8 @@
 # Azure Live Interpreter - React App
 
-A modern, real-time speech translation web application built with **React**, **TypeScript**, **Tailwind CSS**, and **Azure Speech Service**. This application provides live interpretation capabilities with support for multiple languages, automatic language detection, and neural voice synthesis.
+A modern, real-time speech translation web application built with **React 19**, **TypeScript**, **Tailwind CSS**, and **Azure Speech Service**. This application provides live interpretation capabilities with support for multiple languages, automatic language detection, and neural voice synthesis.
+
+> **🔒 Security Notice:** This application has been updated to **React 19.0.1** to address [CVE-2025-55182 (React2Shell)](../../SECURITY.md), a critical remote code execution vulnerability. See the [Security Advisory](../../SECURITY.md) for details.
 
 ## 🌟 Features
 
